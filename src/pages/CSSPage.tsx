@@ -7,13 +7,15 @@ import { Searchbar } from "../components/Searchbar";
 import CSSdata from "../data/CSSdata";
 
 export const CSSPage = () => {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState<string>("");
 
   useEffect(() => {
     Prism.highlightAll();
   }, []);
 
-  const filtered = CSSdata.filter((x) => x.title.toLowerCase().includes(search.toLowerCase()));
+  const filtered = CSSdata.filter((x) =>
+    x.title.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <div className="page">
@@ -25,7 +27,12 @@ export const CSSPage = () => {
 
       <div>
         {filtered.map(({ index, title, language, snippet }) => (
-          <Codeblock key={index} title={title} language={language} snippet={snippet} />
+          <Codeblock
+            key={index}
+            title={title}
+            language={language}
+            snippet={snippet}
+          />
         ))}
       </div>
     </div>

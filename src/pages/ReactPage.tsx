@@ -7,12 +7,16 @@ import REACTdata from "../data/REACTdata";
 import { Searchbar } from "../components/Searchbar";
 
 export const ReactPage = () => {
-  const [search, setSearch] = useState("");
-  const filtered = REACTdata.filter((x) => x.title.toLowerCase().includes(search.toLowerCase()));
+  const [search, setSearch] = useState<string>("");
 
   useEffect(() => {
     Prism.highlightAll();
   }, []);
+
+  const filtered = REACTdata.filter((x) =>
+    x.title.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div className="page">
       <Header title="ReactJS Snippits" />
@@ -22,7 +26,12 @@ export const ReactPage = () => {
       <Searchbar setSearch={setSearch}></Searchbar>
       <div>
         {filtered.map(({ index, title, language, snippet }) => (
-          <Codeblock key={index} title={title} language={language} snippet={snippet} />
+          <Codeblock
+            key={index}
+            title={title}
+            language={language}
+            snippet={snippet}
+          />
         ))}
       </div>
     </div>

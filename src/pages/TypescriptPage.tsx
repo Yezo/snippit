@@ -7,13 +7,15 @@ import TYPESCRIPTdata from "../data/TYPESCRIPTdata";
 import { Searchbar } from "../components/Searchbar";
 
 export const TypescriptPage = () => {
-  const [search, setSearch] = useState("");
-  const filtered = TYPESCRIPTdata.filter((x) => x.title.toLowerCase().includes(search.toLowerCase()));
+  const [search, setSearch] = useState<string>("");
 
   useEffect(() => {
     Prism.highlightAll();
   }, []);
 
+  const filtered = TYPESCRIPTdata.filter((x) =>
+    x.title.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <div className="page">
@@ -24,7 +26,12 @@ export const TypescriptPage = () => {
       <Searchbar setSearch={setSearch}></Searchbar>
       <div>
         {filtered.map(({ index, title, language, snippet }) => (
-          <Codeblock key={index} title={title} language={language} snippet={snippet} />
+          <Codeblock
+            key={index}
+            title={title}
+            language={language}
+            snippet={snippet}
+          />
         ))}
       </div>
     </div>

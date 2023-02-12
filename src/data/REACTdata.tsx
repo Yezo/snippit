@@ -14,56 +14,44 @@ const REACTdata: REACTPage[] = [
   },
   {
     index: 2,
-    title: "Hooks: useState",
+    title: "useState & useEffect",
     language: "Javascript",
-    snippet: `import { useState } from 'react';
+    snippet: `import { useState, useEffect } from 'react';
 
-const [count, setCount] = useState(0);`,
+const [count, setCount] = useState(0);
+
+useEffect(() => {
+  // LOGIC_HERE
+}, [DEPENDENCY_VALUE_IF_NEEDED]);`,
   },
   {
     index: 3,
-    title: "Hooks: useEffect",
-    language: "Javascript",
-    snippet: `import { useEffect } from 'react';
-
-    useEffect(() => {
-      // LOGIC_HERE
-    }, [DEPENDENCY_VALUE_IF_NEEDED]);`,
-  },
-  {
-    index: 4,
-    title: "Conditionally render a component",
-    language: "Javascript",
-    snippet: `{renderComponent ? <FirstComponent /> : <SecondComponent />}`,
-  },
-  {
-    index: 4,
     title: "Cleanup on fetch with useEffect",
     language: "Javascript",
-    snippet: `  useEffect(() => {
-      const controller = new AbortController();
-      const signal = controller.signal;
-  
-      fetch(API_URL, { signal })
-      .then(async (resp) => {
-        if(resp.ok) {
-          const state = await resp.json();
-          setState(state);
-        } else {
-          console.log("Your items could not be fetched");
-        }
-      })
-      .catch((err) => console.log(err));
-      return () => {
-        controller.abort();
-      };
-    }, []);`,
+    snippet: `useEffect(() => {
+  const controller = new AbortController();
+  const fetchAPI = async () => {
+    setError(false);
+    setIsLoading(true);
+    try {
+      const data = await fetch(API_URL);
+      const resp = await resBlueCrystal.json();
+      setData(resp);
+    } catch (error) {
+      controller.signal.aborted && console.log("Aborted the fetch.");
+    } 
+  };
+  fetchAPI();
+  return () => {
+    controller.abort();
+  };
+}, []);`,
   },
   {
     index: 4,
-    title: "Conditionally render a component",
+    title: "?",
     language: "Javascript",
-    snippet: `{renderComponent ? <FirstComponent /> : <SecondComponent />}`,
+    snippet: `COCK`,
   },
 ];
 

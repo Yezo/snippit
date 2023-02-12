@@ -21,9 +21,6 @@ const sym1 = Symbol(); // built-in objects
 const object = { // non-primitive data type containing key and value pairs
   key: value,
   name: "Joe",
-  arms: 2,
-  married: false;
-  income: null;
 };`,
   },
   {
@@ -37,7 +34,8 @@ const map = arr.map(item => item + 1);
 // returns [2,3,4,5,6]
 
 // The "filter" method returns an array with each element that returned true
-const filter = arr.filter(item => item === 2 || item === 5); // returns [2, 5]
+const filter = arr.filter(item => item === 2 || item === 5); 
+// returns [2, 5]
 
 
 const sort = arr.sort((item1, item2) => item1 - item2)); 

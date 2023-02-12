@@ -7,12 +7,16 @@ import JSdata from "../data/JSdata";
 import { Searchbar } from "../components/Searchbar";
 
 export const JSPage = () => {
-  const [search, setSearch] = useState("");
-  const filtered = JSdata.filter((x) => x.title.toLowerCase().includes(search.toLowerCase()));
+  const [search, setSearch] = useState<string>("");
 
   useEffect(() => {
     Prism.highlightAll();
   }, []);
+
+  const filtered = JSdata.filter((x) =>
+    x.title.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div className="page">
       <Header title="Javascript Snippits" />
@@ -22,7 +26,12 @@ export const JSPage = () => {
       <Searchbar setSearch={setSearch}></Searchbar>
       <div>
         {filtered.map(({ index, title, language, snippet }) => (
-          <Codeblock key={index} title={title} language={language} snippet={snippet} />
+          <Codeblock
+            key={index}
+            title={title}
+            language={language}
+            snippet={snippet}
+          />
         ))}
       </div>
     </div>

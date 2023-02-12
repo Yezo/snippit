@@ -7,7 +7,6 @@ import { Header } from "../components/Header";
 export const HomePage = () => {
   useEffect(() => {
     Prism.highlightAll();
-    console.log(navigationList);
   }, []);
 
   return (
@@ -19,14 +18,14 @@ export const HomePage = () => {
       />
 
       {/* === Navigation === */}
-      <nav className="flex flex-col sm:flex-row gap-2 justify-center align-middle items-center h-full">
+      <nav className="flex flex-col sm:flex-row gap-1 justify-center align-middle items-center h-full">
         {navigationList.map(({ index, title, link }) => (
           <Link
             to={link}
-            className={`mt-10 h-28 sm:h-80 sm:w-48 w-80 px-3 py-2 rounded-lg text-secondary bg-text font-bold  hover:bg-zinc-400 hover:text-slate-900 flex items-center justify-center`}
+            className={`mt-10 h-28 sm:h-80 sm:w-48 w-80 px-3 py-2  text-secondary bg-text font-bold  hover:bg-zinc-400 hover:text-slate-900 flex items-center justify-center`}
             key={index}
           >
-            <a href={link}>{title}</a>
+            {title}
           </Link>
         ))}
       </nav>

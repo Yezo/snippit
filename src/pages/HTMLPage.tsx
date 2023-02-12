@@ -7,13 +7,15 @@ import { NavButton } from "../components/NavButton";
 import { Searchbar } from "../components/Searchbar";
 
 export const HTMLPage = () => {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState<string>("");
 
   useEffect(() => {
     Prism.highlightAll();
   }, []);
 
-  const filtered = HTMLdata.filter((item) => item.title.toLowerCase().includes(search.toLowerCase()));
+  const filtered = HTMLdata.filter((item) =>
+    item.title.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <div className="page">
@@ -24,7 +26,12 @@ export const HTMLPage = () => {
 
       <div>
         {filtered.map(({ index, title, language, snippet }) => (
-          <Codeblock key={index} title={title} language={language} snippet={snippet} />
+          <Codeblock
+            key={index}
+            title={title}
+            language={language}
+            snippet={snippet}
+          />
         ))}
       </div>
     </div>
