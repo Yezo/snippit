@@ -19,12 +19,13 @@ export const ReactPage = () => {
 
   return (
     <div className="page">
-      <Header title="ReactJS Snippits" />
-
-      <NavButton />
+      <header>
+        <Header title="ReactJS Snippits" />
+        <NavButton />
+      </header>
 
       <Searchbar setSearch={setSearch}></Searchbar>
-      <div>
+      <main>
         {filtered.map(({ index, title, language, snippet }) => (
           <Codeblock
             key={index}
@@ -33,7 +34,7 @@ export const ReactPage = () => {
             snippet={snippet}
           />
         ))}
-      </div>
+      </main>
     </div>
   );
 };

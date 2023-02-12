@@ -19,12 +19,13 @@ export const TypescriptPage = () => {
 
   return (
     <div className="page">
-      <Header title="Typescript Snippits" />
-
-      <NavButton />
+      <header>
+        <Header title="Typescript Snippits" />
+        <NavButton />
+      </header>
 
       <Searchbar setSearch={setSearch}></Searchbar>
-      <div>
+      <main>
         {filtered.map(({ index, title, language, snippet }) => (
           <Codeblock
             key={index}
@@ -33,7 +34,7 @@ export const TypescriptPage = () => {
             snippet={snippet}
           />
         ))}
-      </div>
+      </main>
     </div>
   );
 };

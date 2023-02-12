@@ -51,7 +51,7 @@ useEffect(() => {
     index: 4,
     title: "?",
     language: "Javascript",
-    snippet: `COCK`,
+    snippet: ``,
   },
 ];
 

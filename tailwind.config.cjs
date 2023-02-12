@@ -9,10 +9,13 @@ module.exports = {
         textfont: ['"Noto Sans JP", sans-serif;'],
       },
       colors: {
-        // 20232b
-        primary: "#15181D",
+        // #15181d primary
+        // #20232b secondary
+        // #c2c2cc text
+        primary: "#ECECEC",
         secondary: "#20232b",
-        text: "#C2C2CC",
+        text: "#15181d",
+        accent: "#7AB9E0",
       },
     },
   },

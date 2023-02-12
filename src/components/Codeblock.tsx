@@ -13,8 +13,8 @@ export const Codeblock = ({ title, language, snippet }: Props) => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center mb-8  pt-4 pb-2 px-4 bg-secondary rounded lg:p-4">
-      <h2 className="font-bold text-lg tracking-tight">{title}</h2>
+    <section className="flex flex-col justify-center mb-8  pt-4 pb-2 px-4 border-l-8 border-l-accent secondary lg:p-4">
+      <h2 className="text-lg tracking-tighter font-primary">{title}</h2>
       <pre
         className="w-full cursor-pointer"
         onClick={() => {
@@ -23,6 +23,6 @@ export const Codeblock = ({ title, language, snippet }: Props) => {
       >
         <code className={`language-${language}`}>{`${snippet}`}</code>
       </pre>
-    </div>
+    </section>
   );
 };

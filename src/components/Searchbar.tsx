@@ -13,7 +13,7 @@ export const Searchbar = ({ setSearch }: Props) => {
       <form>
         <input
           type="text"
-          className="bg-secondary rounded-lg text-text text-sm px-5 py-3 mb-8 mt-2 focus:outline-none  ring-text placeholder:text-text placeholder:text-sm placeholder:text-opacity-50 max-w-[20rem] "
+          className="bg-secondary rounded-lg text-primary text-sm px-4 py-3 mb-8 mt-2 focus:outline-none  ring-text placeholder:text-primary placeholder:text-sm placeholder:text-opacity-50 max-w-[20rem] "
           placeholder="Search something..."
           onChange={handleSearch}
         ></input>
