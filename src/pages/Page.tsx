@@ -35,7 +35,7 @@ export const Page = ({ data, heading }: Props) => {
       </header>
 
       <Searchbar setSearch={setSearch}></Searchbar>
-      <main>
+      <main className="divide-y divide-gray-500">
         {filtered &&
           filtered.map(({ index, title, language, snippet }) => (
             <Codeblock

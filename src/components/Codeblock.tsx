@@ -13,7 +13,7 @@ export const Codeblock = ({ title, language, snippet }: Props) => {
   }, []);
 
   return (
-    <section className="flex flex-col justify-center mb-8  pt-4 pb-2 px-4 border-l-8 border-l-accent secondary lg:p-4">
+    <section className="flex flex-col justify-center p-4 ">
       <h2 className="text-lg tracking-tighter font-primary">{title}</h2>
       <pre
         className="w-full cursor-pointer"
