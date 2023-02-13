@@ -7,7 +7,7 @@ export const NavButton = () => {
       {navigationList.map(({ index, title, link }) => (
         <Link
           to={link}
-          className={`rounded-md p-2 min-w-[6rem] text-primary text-sm  grid place-items-center bg-secondary hover:bg-accent hover:text-text hover:tracking-wider tracking-normal focus:bg-accent focus:text-secondary`}
+          className={`rounded-md p-2 min-w-[6rem] text-primary text-sm select-none grid place-items-center bg-secondary hover:bg-accent hover:text-text hover:tracking-wider tracking-normal focus:bg-accent focus:text-secondary`}
           key={index}
         >
           {title}
