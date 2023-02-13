@@ -5,9 +5,10 @@ interface Props {
   title: string;
   language: string;
   snippet: string;
+  description?: string;
 }
 
-export const Codeblock = ({ title, language, snippet }: Props) => {
+export const Codeblock = ({ title, language, snippet, description }: Props) => {
   const [toggle, setToggle] = useState<boolean>(false);
 
   function handleToggle() {
@@ -66,11 +67,18 @@ export const Codeblock = ({ title, language, snippet }: Props) => {
           )}
         </span>
       </div>
-
       {toggle && (
-        <pre className="w-full ">
-          <code className={`language-${language}`}>{`${snippet}`}</code>
-        </pre>
+        <>
+          {description ? (
+            <p className="font-sm font-inter font-thin px-4 pb-4 max-w-[65ch] ">
+              {description}
+            </p>
+          ) : null}
+
+          <pre className="w-full ">
+            <code className={`language-${language}`}>{`${snippet}`}</code>
+          </pre>
+        </>
       )}
     </section>
   );

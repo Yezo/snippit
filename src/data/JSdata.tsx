@@ -3,6 +3,7 @@ interface JSPage {
   title: string;
   language: string;
   snippet: string;
+  description?: string;
 }
 
 const JSdata: JSPage[] = [
@@ -10,38 +11,45 @@ const JSdata: JSPage[] = [
     index: 1,
     title: "Data types",
     language: "Javascript",
-    snippet: `//There are 7 primitive and 1 non-primitive data types 
-const string = "I am a string"; // zero or more characters
-const number = 2022; // any integers
+    description: "There are a total of 7 primitive types in Javascript.",
+    snippet: `const string = "I am a string"; // zero or more characters
+const number = 2023; // numeric values
 const bigInt = 123456789012345601234567890n; // any integers beyond 9007199254740991
 const boolean = true; // returns true or false
-const test1 = null; // for unknown values
-const test2 = undefined; // for unassigned values
-const sym1 = Symbol(); // built-in objects
-const object = { // non-primitive data type containing key and value pairs
-  key: value,
-  name: "Joe",
-};`,
+const nullItem = null; // for unknown values
+const undefinedItem = undefined; // for unassigned values
+const symbol = Symbol(); // built-in objects`,
   },
   {
     index: 2,
-    title: "Array methods",
+    title: "Arrays & Objects",
     language: "Javascript",
-    snippet: `const arr = [1,2,3,4,5];
+    description:
+      "Arrays are data structures that can hold multiple values in a single variable denoted with [ ]. Objects are data structures that can hold key and value pairs and are denoted with { }.",
+    snippet: `const arr = ["This is an array", 2023, undefined, false, "Hi"]
 
-// The "map" method returns an array with each element transformed
-const map = arr.map(item => item + 1); 
-// returns [2,3,4,5,6]
-
-// The "filter" method returns an array with each element that returned true
-const filter = arr.filter(item => item === 2 || item === 5); 
-// returns [2, 5]
-
-
-const sort = arr.sort((item1, item2) => item1 - item2)); 
-
-    
-    `,
+const obj = {
+    head: "big",
+    eyes: 2,
+    brain: null
+}`,
+  },
+  {
+    index: 3,
+    title: "Sorting an array of numbers",
+    language: "Javascript",
+    description: `We can use the .sort() method to sort strings alphabetically but we can also use it to sort arrays of numbers. For people who find it difficult to remember which way is ascending vs. descending, try remembering it as A to Z and vice-versa.`,
+    snippet: `const arr = [2,8,4,3,5];
+const ascending = arr.sort(a, z) => a - z) // returns [2,3,4,5,8]
+const descending = arr.sort(a, z) => z - a)// returns [8,5,4,3,2]`,
+  },
+  {
+    index: 4,
+    title: "Remove all duplicates in an array",
+    language: "Javascript",
+    description: `Using Set( ) is the simplest and fastest method for removing duplicates in an array.`,
+    snippet: `const arr = [5,10,10,25,99];
+const removedDuplicates = [...new Set(arr)] // returns [5,10,25,99]`,
   },
 ];
 

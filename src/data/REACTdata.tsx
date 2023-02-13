@@ -3,6 +3,7 @@ interface REACTPage {
   title: string;
   language: string;
   snippet: string;
+  description?: string;
 }
 
 const REACTdata: REACTPage[] = [
@@ -10,6 +11,8 @@ const REACTdata: REACTPage[] = [
     index: 1,
     title: "Component Lifecycle",
     language: "Javascript",
+    description:
+      "React has a component lifecycle that can be simplified down to three phases: Mounting, Updating, and Unmounting.",
     snippet: `componentDidMount() => componentDidUpdate() => componentWillUnmount()`,
   },
   {
@@ -28,6 +31,8 @@ useEffect(() => {
     index: 3,
     title: "Cleanup on fetch with useEffect",
     language: "Javascript",
+    description:
+      "We want to clean up our fetches in useEffect to prevent unnecessary fetching and the overwriting of previously fetched data. We can access the AbortController( ) to tell us when a request has been aborted. Adding a try and catch block is useful for catching any errors that may show up during a fetch request. ",
     snippet: `useEffect(() => {
   const controller = new AbortController();
   const fetchAPI = async () => {

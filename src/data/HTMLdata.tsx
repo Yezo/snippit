@@ -3,6 +3,7 @@ interface HTMLPage {
   title: string;
   language: string;
   snippet: string;
+  description?: string;
 }
 
 const HTMLdata: HTMLPage[] = [
@@ -47,10 +48,14 @@ const HTMLdata: HTMLPage[] = [
 <input type="button">`,
   },
   {
-    index: 4,
-    title: "???",
+    index: 6,
+    title: "When to use article vs. section",
     language: "HTML",
-    snippet: `???`,
+    snippet: `<input type="text">
+<input type="radio">
+<input type="checkbox">
+<input type="submit">
+<input type="button">`,
   },
 ];
 

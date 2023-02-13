@@ -10,6 +10,7 @@ type dataType = {
   title: string;
   language: string;
   snippet: string;
+  description?: string;
 };
 type Props = {
   data: dataType[];
@@ -37,12 +38,13 @@ export const Page = ({ data, heading }: Props) => {
       <Searchbar setSearch={setSearch}></Searchbar>
       <main className="divide-y divide-gray-500">
         {filtered &&
-          filtered.map(({ index, title, language, snippet }) => (
+          filtered.map(({ index, title, language, snippet, description }) => (
             <Codeblock
               key={index}
               title={title}
               language={language}
               snippet={snippet}
+              description={description}
             />
           ))}
       </main>
