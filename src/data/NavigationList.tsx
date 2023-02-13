@@ -8,27 +8,27 @@ const navigationList: Array<Navigation> = [
   {
     index: 1,
     title: "HTML",
-    link: "/html",
+    link: "/html-snippets",
   },
   {
     index: 2,
     title: "CSS",
-    link: "/css",
+    link: "/css-snippets",
   },
   {
     index: 3,
     title: "Javascript",
-    link: "/javascript",
+    link: "/javascript-snippets",
   },
   {
     index: 4,
     title: "React",
-    link: "/react",
+    link: "/react-snippets",
   },
   {
     index: 5,
     title: "Typescript",
-    link: "/typescript",
+    link: "/typescript-snippets",
   },
 ];
 

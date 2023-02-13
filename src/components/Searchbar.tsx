@@ -9,7 +9,7 @@ export const Searchbar = ({ setSearch }: Props) => {
   };
 
   return (
-    <div className="grid place-items-center">
+    <section className="grid place-items-center">
       <form>
         <input
           type="text"
@@ -18,6 +18,6 @@ export const Searchbar = ({ setSearch }: Props) => {
           onChange={handleSearch}
         ></input>
       </form>
-    </div>
+    </section>
   );
 };

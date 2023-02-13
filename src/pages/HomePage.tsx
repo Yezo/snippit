@@ -4,6 +4,8 @@ import navigationList from "../data/NavigationList";
 import { Link } from "react-router-dom";
 import { Header } from "../components/Header";
 
+//TODO make a page component that takes props cuz fuck maintaining all these pages indiivudally
+//TODO re-create codeblock + give it its own toggle state so it rmbrs itself
 export const HomePage = () => {
   useEffect(() => {
     Prism.highlightAll();
