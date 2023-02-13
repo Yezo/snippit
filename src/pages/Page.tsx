@@ -21,11 +21,11 @@ export const Page = ({ data, heading }: Props) => {
 
   useEffect(() => {
     Prism.highlightAll();
-  }, []);
+  }, [data]);
 
-  const filtered =
-    data &&
-    data.filter((x) => x.title.toLowerCase().includes(search.toLowerCase()));
+  const filtered = data.filter((x) =>
+    x.title.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <div className="page">
