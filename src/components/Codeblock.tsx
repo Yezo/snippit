@@ -27,7 +27,11 @@ export const Codeblock = ({ title, language, snippet }: Props) => {
         className="flex justify-between w-full cursor-pointer p-4"
         onClick={handleToggle}
       >
-        <h2 className="text-lg tracking-tighter font-primary select-none">
+        <h2
+          className={`text-lg tracking-tighter font-inter select-none ${
+            toggle ? "font-bold" : "font-normal"
+          }`}
+        >
           {title}
         </h2>
         <span className="grid place-items-center pr-5 text-secondary">

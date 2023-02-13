@@ -22,14 +22,39 @@ export const HomePage = () => {
       </header>
 
       {/* === Navigation === */}
-      <nav className="flex flex-col sm:flex-row gap-1 justify-center align-middle items-center h-full">
-        {navigationList.map(({ index, title, link }) => (
-          <Link
-            to={link}
-            className={`mt-10 h-28 sm:h-80 sm:w-48 w-80 px-3 py-2  text-primary bg-text  hover:bg-accent hover:text-text flex items-center justify-center`}
-            key={index}
-          >
-            {title}
+      <nav className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-5 justify-center align-middle items-center h-full mt-6">
+        {navigationList.map(({ index, title, link, imgURL }) => (
+          <Link to={link} key={index} className="group relative block h-60">
+            <span className="absolute inset-0 border-2 border-dashed border-black"></span>
+
+            <div className="relative flex h-full transform items-end border-2 border-secondary bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
+              <div className="px-8 pb-8 transition-opacity group-hover:absolute group-hover:opacity-0 ">
+                <span className="max-w-[40px]">
+                  <img src={imgURL} className="max-w-[40px]"></img>
+                </span>
+
+                <h2 className="mt-4 text-2xl font-medium tracking-wide">
+                  {title}
+                </h2>
+              </div>
+
+              <div
+                className={`absolute p-8 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 `}
+              >
+                <h3 className="mt-4 text-2xl font-[600] tracking-wide uppercase font-inter">
+                  {title}
+                </h3>
+
+                <p className="mt-4  text-[0.925rem] tracking-normal font-inter">
+                  Explore a wide variety of code snippets and other useful tips
+                  and tricks for {title}.
+                </p>
+
+                <button className="inline-flex items-center justify-center rounded border-2 border-[#171515] bg-[#171515] px-2 py-1 text-sm font-medium text-white transition-colors hover:bg-transparent hover:text-[#171515] focus:bg-primary focus:text-secondary min-w-[6.5rem] mt-4">
+                  Visit Now
+                </button>
+              </div>
+            </div>
           </Link>
         ))}
       </nav>

@@ -7,6 +7,7 @@ module.exports = {
         primary: ['"Be Vietnam Pro"'],
         secondary: ['"Just Another Hand", cursive;'],
         textfont: ['"Noto Sans JP", sans-serif;'],
+        inter: ['"Inter", sans-serif;'],
       },
       colors: {
         // #15181d primary
