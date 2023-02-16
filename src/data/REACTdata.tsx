@@ -52,12 +52,6 @@ useEffect(() => {
   };
 }, []);`,
   },
-  {
-    index: 4,
-    title: "?",
-    language: "Javascript",
-    snippet: ``,
-  },
 ];
 
 export default REACTdata;

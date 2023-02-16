@@ -75,7 +75,7 @@ export const Codeblock = ({ title, language, snippet, description }: Props) => {
             </p>
           ) : null}
 
-          <pre className="w-full ">
+          <pre className="w-full line-numbers">
             <code className={`language-${language}`}>{`${snippet}`}</code>
           </pre>
         </>

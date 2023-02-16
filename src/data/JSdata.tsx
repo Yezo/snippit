@@ -51,6 +51,17 @@ const descending = arr.sort(a, z) => z - a)// returns [8,5,4,3,2]`,
     snippet: `const arr = [5,10,10,25,99];
 const removedDuplicates = [...new Set(arr)] // returns [5,10,25,99]`,
   },
+  {
+    index: 5,
+    title: "Toggle state",
+    language: "Javascript",
+    description: `Using Set( ) is the simplest and fastest method for removing duplicates in an array.`,
+    snippet: `const [toggled, setToggled] = useState(false)
+    
+    <button onClick={() => setToggled((prevState) => !prevState)}>
+      {toggled && <div>"Content here</div>}
+    </button>`,
+  },
 ];
 
 export default JSdata;
