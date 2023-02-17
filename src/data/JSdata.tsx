@@ -51,6 +51,38 @@ const descending = arr.sort(a, z) => z - a)// returns [8,5,4,3,2]`,
     snippet: `const arr = [5,10,10,25,99];
 const removedDuplicates = [...new Set(arr)] // returns [5,10,25,99]`,
   },
+  {
+    index: 5,
+    title: "Shorter if statements with conditionals",
+    language: "Javascript",
+    description: `"If statements" can get out of hand quickly as code complexity grows. They can instead be shortened using the && conditional operator or with ternary operators.`,
+    snippet: `num > 10 && console.log("Number is above 10!")
+num === 10 ? console.log("Number is 10!") : console.log("Number is not 10!")`,
+  },
+  {
+    index: 6,
+    title: "Formatting numbers as currency ",
+    language: "Javascript",
+    description: `"Use Intl.NumberFormat to format your numbers as currency. You can also choose which country or how many decimals you want to show.`,
+    snippet: `const formatNums = new Intl.NumberFormat("en-US", {
+      currency: "USD",
+      minimumFractionDigits: 2,
+    })
+    
+const num = formatNums.format(5000)
+//"$5,000"`,
+  },
+
+  {
+    index: 7,
+    title: "Combine two arrays together",
+    language: "Javascript",
+    description: `Use the "..." spread operator to merge two arrays.`,
+    snippet: `const arr = [1,2,3]
+const arrTwo = [4,5,6]
+const combined = [...arr, ...arrTwo]
+//[1,2,3,4,5,6]`,
+  },
 ];
 
 export default JSdata;

@@ -42,6 +42,13 @@ const navigationList: Array<Navigation> = [
     imgURL:
       "https://cdn.iconscout.com/icon/free/png-512/typescript-3521774-2945272.png?f=avif&w=256",
   },
+  {
+    index: 6,
+    title: "Git",
+    link: "/git-snippets",
+    imgURL:
+      "https://cdn.iconscout.com/icon/free/png-512/git-225996.png?f=avif&w=256",
+  },
 ];
 
 export default navigationList;

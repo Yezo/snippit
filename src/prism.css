@@ -5,7 +5,7 @@ pre[class*="language-"] {
   color: white;
   background: 0 0;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  font-size: 1em;
+  font-size: 0.95em;
   text-align: left;
   white-space: pre-wrap;
   word-spacing: normal;
@@ -22,7 +22,7 @@ pre[class*="language-"] {
   border-radius: 0.3em;
 }
 pre[class*="language-"] {
-  padding: 1em;
+  padding: 1.5em;
   margin-bottom: 1.5em;
   overflow: auto;
 }

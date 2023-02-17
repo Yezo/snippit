@@ -13,6 +13,7 @@ const TYPESCRIPTdata: TYPESCRIPTPage[] = [
     language: "Javascript",
     description: "The most common types you'll see and use.",
     snippet: `type Props = {
+  //Basic Types
   sentence: string;
   count: number;
   status: boolean;
@@ -25,11 +26,15 @@ const TYPESCRIPTdata: TYPESCRIPTPage[] = [
   //onClick
   onClick: () => void;
 
-  //onClick with an parameter(s)
+  //onClick with a parameter(s)
   onClick: (event: React.MouseEvent<HTMLInputElement>) => void;
 
-  //setState 
+  //React-related Types
   setState: React.Dispatch<React.SetStateAction<number>>;
+  children: React.ReactNode; 
+  childrenElement: JSX.Element; 
+  style: React.CSSProperties;
+  onChange: React.FormEventHandler<HTMLInputElement>;
 }`,
   },
   {
@@ -79,9 +84,7 @@ const gordonramsey: gordanramsey = {
           restaurant_rank: 2
       }
   ],
-};
-  
-`,
+};`,
   },
 ];
 

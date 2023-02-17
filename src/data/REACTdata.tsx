@@ -42,7 +42,7 @@ const REACTdata: REACTPage[] = [
     index: 3,
     title: "Toggle state",
     language: "Javascript",
-    description: `For when you need some content to be conditionally shown through a button onClick event.`,
+    description: `For when you need content to be conditionally shown through an onClick event.`,
     snippet: `const [toggled, setToggled] = useState(false)
     
 <button onClick={() => setToggled((prevState) => !prevState)}>

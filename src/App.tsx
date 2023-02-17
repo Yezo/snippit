@@ -7,6 +7,7 @@ import CSSdata from "./data/CSSdata";
 import JSdata from "./data/JSdata";
 import REACTdata from "./data/REACTdata";
 import TYPESCRIPTdata from "./data/TYPESCRIPTdata";
+import GITdata from "./data/GITdata";
 
 function App() {
   return (
@@ -32,6 +33,10 @@ function App() {
         <Route
           path="/typescript-snippets"
           element={<Page data={TYPESCRIPTdata} heading="Typescript Snippets" />}
+        ></Route>
+        <Route
+          path="/git-snippets"
+          element={<Page data={GITdata} heading="Git Snippets" />}
         ></Route>
       </Routes>
     </div>

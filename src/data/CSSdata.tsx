@@ -11,7 +11,7 @@ const CSSdata: CSSPage[] = [
     index: 1,
     title: "Centering a div",
     language: "CSS",
-    description: "Yup.",
+    description: "🤡 We've all googled it before. 🤡",
     snippet: `/* Grid */
   .container{
     display: grid;
@@ -53,8 +53,7 @@ const CSSdata: CSSPage[] = [
 /* could instead be written as: */
   :is(header, nav, footer) a:hover {
       text-decoration: underline;
-}
-  `,
+}`,
   },
 
   {

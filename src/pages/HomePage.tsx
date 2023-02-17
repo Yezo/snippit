@@ -10,7 +10,7 @@ export const HomePage = () => {
   }, []);
 
   return (
-    <div className="px-4 w-full sm:w-10/12 md:w-9/12 lg:w-6/12 xl:w-5/12 min-h-screen flex flex-col mx-auto text-text font-primary font-medium">
+    <div className="px-4 pb-10 w-full sm:w-10/12 md:w-9/12 lg:w-6/12 xl:w-5/12 min-h-screen flex flex-col mx-auto text-text font-primary font-medium">
       {/* === Header === */}
       <header>
         <Header
@@ -45,7 +45,7 @@ export const HomePage = () => {
 
                 <p className="mt-4  text-[0.925rem] tracking-normal font-primary">
                   Explore a wide variety of code snippets and other useful tips
-                  and tricks for {title}.
+                  for {title}.
                 </p>
 
                 <button className="inline-flex items-center justify-center rounded border-2 border-[#171515] bg-[#171515] px-2 py-1 text-sm font-medium text-white transition-colors hover:bg-transparent hover:text-[#171515] focus:bg-primary focus:text-secondary min-w-[6.5rem] mt-4">
