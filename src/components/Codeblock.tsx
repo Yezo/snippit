@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import Prism from "prismjs";
 
-interface Props {
+type Props = {
   title: string;
   language: string;
   snippet: string;
   description?: string;
-}
+};
 
 export const Codeblock = ({ title, language, snippet, description }: Props) => {
   const [toggle, setToggle] = useState<boolean>(false);
@@ -29,7 +29,7 @@ export const Codeblock = ({ title, language, snippet, description }: Props) => {
         onClick={handleToggle}
       >
         <h2
-          className={`text-lg tracking-tighter font-inter select-none ${
+          className={`text-lg tracking-tighter select-none ${
             toggle ? "font-bold" : "font-normal"
           }`}
         >
@@ -70,7 +70,7 @@ export const Codeblock = ({ title, language, snippet, description }: Props) => {
       {toggle && (
         <>
           {description ? (
-            <p className="font-sm font-inter font-thin px-4 pb-4 max-w-[65ch] ">
+            <p className="font-sm font-thin px-4 pb-4 max-w-[65ch] ">
               {description}
             </p>
           ) : null}

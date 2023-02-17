@@ -29,14 +29,14 @@ export const Page = ({ data, heading }: Props) => {
   );
 
   return (
-    <div className="page">
+    <div className="px-4 w-full sm:w-10/12 md:w-9/12 lg:w-6/12 xl:w-5/12 min-h-screen flex flex-col mx-auto text-text font-primary font-medium">
       <header>
         <Header title={heading} />
         <NavButton />
       </header>
 
       <Searchbar setSearch={setSearch}></Searchbar>
-      <main className="divide-y divide-gray-500">
+      <main className="divide-y divide-gray-400">
         {filtered &&
           filtered.map(({ index, title, language, snippet, description }) => (
             <Codeblock

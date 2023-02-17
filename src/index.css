@@ -2,13 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .page {
-    @apply px-4 w-full sm:w-10/12 md:w-9/12 lg:w-6/12 xl:w-5/12 min-h-screen flex flex-col mx-auto text-text font-textfont font-medium;
-  }
-}
+/* Prevents scrollbar from pushing content to the left */
 html {
-  /* margin-left: calc(100vw - 100%);*/
   width: 100vw;
   overflow-x: hidden;
 }

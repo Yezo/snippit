@@ -4,19 +4,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['"Be Vietnam Pro"'],
-        secondary: ['"Just Another Hand", cursive;'],
-        textfont: ['"Noto Sans JP", sans-serif;'],
-        inter: ['"Inter", sans-serif;'],
+        primary: ['"Inter", sans-serif;'],
+        heading: ['"Just Another Hand", cursive;'],
       },
       colors: {
-        // #15181d primary
-        // #20232b secondary
-        // #c2c2cc text
         primary: "#ECECEC",
         secondary: "#20232b",
         text: "#15181d",
-        accent: "#7AB9E0",
       },
     },
   },

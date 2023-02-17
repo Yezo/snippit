@@ -1,18 +1,16 @@
-import { useEffect } from "react";
 import Prism from "prismjs";
+import { useEffect } from "react";
 import navigationList from "../data/NavigationList";
 import { Link } from "react-router-dom";
 import { Header } from "../components/Header";
 
-//TODO make a page component that takes props cuz fuck maintaining all these pages indiivudally
-//TODO re-create codeblock + give it its own toggle state so it rmbrs itself
 export const HomePage = () => {
   useEffect(() => {
     Prism.highlightAll();
   }, []);
 
   return (
-    <div className="page">
+    <div className="px-4 w-full sm:w-10/12 md:w-9/12 lg:w-6/12 xl:w-5/12 min-h-screen flex flex-col mx-auto text-text font-primary font-medium">
       {/* === Header === */}
       <header>
         <Header
@@ -41,11 +39,11 @@ export const HomePage = () => {
               <div
                 className={`absolute p-8 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 `}
               >
-                <h3 className="mt-4 text-2xl font-[600] tracking-wide uppercase font-inter">
+                <h3 className="mt-4 text-2xl font-[600] tracking-wide uppercase font-primary">
                   {title}
                 </h3>
 
-                <p className="mt-4  text-[0.925rem] tracking-normal font-inter">
+                <p className="mt-4  text-[0.925rem] tracking-normal font-primary">
                   Explore a wide variety of code snippets and other useful tips
                   and tricks for {title}.
                 </p>

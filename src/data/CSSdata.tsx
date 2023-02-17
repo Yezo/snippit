@@ -61,7 +61,7 @@ const CSSdata: CSSPage[] = [
     index: 4,
     title: "Prevent the scrollbar from pushing content to the left",
     language: "CSS",
-    description: `The first option works but instead creates a permanent scrollbar even on pages without scrollable content. Alternatively, the second option is my go-to solution and supposedly only works on centered content. 
+    description: `The first option works but creates a permanent scrollbar even on pages without scrollable content. Alternatively, the second option is my go-to solution but supposedly only works on centered content. 
       `,
     snippet: `/* OPTION 1 */
   html {

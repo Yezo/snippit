@@ -17,18 +17,6 @@ const REACTdata: REACTPage[] = [
   },
   {
     index: 2,
-    title: "useState & useEffect",
-    language: "Javascript",
-    snippet: `import { useState, useEffect } from 'react';
-
-const [count, setCount] = useState(0);
-
-useEffect(() => {
-  // LOGIC_HERE
-}, [DEPENDENCY_VALUE_IF_NEEDED]);`,
-  },
-  {
-    index: 3,
     title: "Cleanup on fetch with useEffect",
     language: "Javascript",
     description:
@@ -36,8 +24,6 @@ useEffect(() => {
     snippet: `useEffect(() => {
   const controller = new AbortController();
   const fetchAPI = async () => {
-    setError(false);
-    setIsLoading(true);
     try {
       const data = await fetch(API_URL);
       const resp = await resBlueCrystal.json();
@@ -51,6 +37,17 @@ useEffect(() => {
     controller.abort();
   };
 }, []);`,
+  },
+  {
+    index: 3,
+    title: "Toggle state",
+    language: "Javascript",
+    description: `For when you need some content to be conditionally shown through a button onClick event.`,
+    snippet: `const [toggled, setToggled] = useState(false)
+    
+<button onClick={() => setToggled((prevState) => !prevState)}>
+  {toggled && <div>"Content here</div>}
+</button>`,
   },
 ];
 
