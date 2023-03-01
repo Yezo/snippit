@@ -4,7 +4,7 @@ import Prism from "prismjs";
 type Props = {
   title: string;
   language: string;
-  snippet: string;
+  snippet?: string;
   description?: string;
 };
 
@@ -75,9 +75,11 @@ export const Codeblock = ({ title, language, snippet, description }: Props) => {
             </p>
           ) : null}
 
-          <pre className="w-full line-numbers">
-            <code className={`language-${language}`}>{`${snippet}`}</code>
-          </pre>
+          {snippet && (
+            <pre className="w-full line-numbers">
+              <code className={`language-${language}`}>{`${snippet}`}</code>
+            </pre>
+          )}
         </>
       )}
     </section>

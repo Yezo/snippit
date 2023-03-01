@@ -29,14 +29,14 @@ export const Page = ({ data, heading }: Props) => {
   );
 
   return (
-    <div className="px-4 w-full sm:w-10/12 md:w-9/12 lg:w-6/12 xl:w-5/12 min-h-screen flex flex-col mx-auto text-text font-primary font-medium">
-      <header>
-        <Header title={heading} />
+    <div className="min-h-screen max-w-4xl mx-auto border-l border-r border-r-slate-800/20 border-l-slate-800/20 px-5 pt-10 ">
+      <Header title={heading} />
+      <nav>
         <NavButton />
-      </header>
+      </nav>
 
       <Searchbar setSearch={setSearch}></Searchbar>
-      <main className="divide-y divide-gray-400">
+      <main className="divide-y divide-gray-400 ">
         {filtered &&
           filtered.map(({ index, title, language, snippet, description }) => (
             <Codeblock

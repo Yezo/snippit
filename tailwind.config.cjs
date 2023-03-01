@@ -8,9 +8,9 @@ module.exports = {
         heading: ['"Just Another Hand", cursive;'],
       },
       colors: {
-        primary: "#ECECEC",
+        primary: "#F1EFE9",
         secondary: "#20232b",
-        text: "#15181d",
+        text: "#282828",
       },
     },
   },

@@ -7,13 +7,13 @@ type Props = {
 
 export const Header = ({ title, description }: Props) => {
   return (
-    <div className="mt-10 grid place-items-center ">
-      <h1 className="flex items-center justify-center text-7xl font-heading text-text">
-        <Link to="/">{title}</Link>
-      </h1>
-      <p className=" max-w-[50ch] mt-7 text-center tracking-tighter opacity-75 font-primary">
+    <header className="grid place-items-center gap-5">
+      <Link to="/">
+        <h1 className="text-7xl font-heading text-text">{title}</h1>
+      </Link>
+      <p className="max-w-[50ch] text-center tracking-tight opacity-90">
         {description}
       </p>
-    </div>
+    </header>
   );
 };

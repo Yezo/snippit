@@ -1,25 +1,19 @@
-import Prism from "prismjs";
-import { useEffect } from "react";
-import navigationList from "../data/NavigationList";
 import { Link } from "react-router-dom";
-import { Header } from "../components/Header";
+import navigationList from "../data/NavigationList";
 
 export const HomePage = () => {
-  useEffect(() => {
-    Prism.highlightAll();
-  }, []);
-
   return (
-    <div className="px-4 pb-10 w-full sm:w-10/12 md:w-9/12 lg:w-6/12 xl:w-5/12 min-h-screen flex flex-col mx-auto text-text font-primary font-medium">
-      {/* === Header === */}
-      <header>
-        <Header
-          title="Snippits"
-          description="This is a cheatsheet filled with code snippets and various tidbits for front-end developers who happen to have the memory of a goldfish."
-        />
+    <div className="min-h-screen max-w-4xl mx-auto border-l border-r border-r-slate-800/20 border-l-slate-800/20 px-5 pt-10">
+      <header className="grid place-items-center gap-5">
+        <Link to="/">
+          <h1 className="text-7xl font-heading text-text">Snippits</h1>
+        </Link>
+        <p className="max-w-[50ch] text-center tracking-tight opacity-90">
+          This is a cheatsheet filled with code snippets and various tidbits for
+          front-end developers who happen to have the memory of a goldfish.
+        </p>
       </header>
 
-      {/* === Navigation === */}
       <nav className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-5 justify-center align-middle items-center h-full mt-6">
         {navigationList.map(({ index, title, link, imgURL }) => (
           <Link to={link} key={index} className="group relative block h-60">
