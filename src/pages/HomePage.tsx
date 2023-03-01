@@ -17,9 +17,7 @@ export const HomePage = () => {
       <nav className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-5 justify-center align-middle items-center h-full mt-6">
         {navigationList.map(({ index, title, link, imgURL }) => (
           <Link to={link} key={index} className="group relative block h-60">
-            <span className="absolute inset-0 border-2 border-dashed border-black"></span>
-
-            <div className="relative flex h-full transform items-end border-2 border-secondary bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
+            <div className=" shadow-md relative flex h-full transform items-end border border-secondary/50 bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
               <div className="px-8 pb-8 transition-opacity group-hover:absolute group-hover:opacity-0 ">
                 <span className="max-w-[40px]">
                   <img src={imgURL} className="max-w-[40px]"></img>
@@ -50,6 +48,26 @@ export const HomePage = () => {
           </Link>
         ))}
       </nav>
+
+      <div className="w-16 h-16 bg-[#DCD8CD] grid place-items-center text-black mt-10 font-bold">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="50"
+          height="50"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <circle cx="6" cy="6" r="3"></circle>
+          <circle cx="6" cy="18" r="3"></circle>
+          <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+          <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+          <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+        </svg>
+      </div>
     </div>
   );
 };
